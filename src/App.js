@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+// import ReactCardFlip from "react-card-flip";
+// import YOUR_FRONT_COMPONENT from "../src/components/YOUR_FRONT_COMPONENT";
+// import YOUR_BACK_COMPONENT from "../src/components/YOUR_BACK_COMPONENT";
 
-function App() {
+import React from 'react'
+import { SingleView } from './views/SingleView'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <SingleView />
+  )
 }
 
-export default App;
+export default App
+
+
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       isFlipped: false,
+//     };
+//     this.handleClick = this.handleClick.bind(this);
+//   }
+
+//   handleClick(e) {
+//     e.preventDefault();
+//     this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <ReactCardFlip
+//           isFlipped={this.state.isFlipped}
+//           flipDirection="vertical"
+//         >
+//           <YOUR_FRONT_COMPONENT className='border-2 border-black'>
+//             This is the front of the card.
+//             <button onClick={this.handleClick}>Click to flip</button>
+//           </YOUR_FRONT_COMPONENT>
+
+//           <YOUR_BACK_COMPONENT className='border-2 border-black'>
+//             This is the back of the card.
+//             <button onClick={this.handleClick}>Click to flip</button>
+//           </YOUR_BACK_COMPONENT>
+//         </ReactCardFlip>
+//       </div>
+//     );
+//   }
+// }
+
