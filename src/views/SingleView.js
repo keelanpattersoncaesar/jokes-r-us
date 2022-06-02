@@ -9,9 +9,8 @@ export const SingleView = () => {
     <div className='bg-[#1982C4] h-screen'>
     <JokesHeader/>
     <JokesBody/>
-    <div className='sticky bottom-0 mt-20'>
-    <JokesFooter  />
-    </div>
+    {/* <div className='sticky bottom-0 mt-20'>
+    </div> */}
     </div>
   )
 }
