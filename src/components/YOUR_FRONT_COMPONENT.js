@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import ReactCardFlip from "react-card-flip";
+// import {React, Component} from "react";
 
-class YOUR_FRONT_COMPONENT extends Component {
-  render() {
-      return
-  }
-}
+// class YOUR_FRONT_COMPONENT extends Component {
+//   render() {
+//       return
+//   }
+// }
 
-export default YOUR_FRONT_COMPONENT;
+// export default YOUR_FRONT_COMPONENT;
