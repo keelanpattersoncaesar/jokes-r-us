@@ -7,6 +7,7 @@ const JokesBody = () => {
   const [darkJokes, setDarkJokes] = useState(null);
   const [punJokes, setPunJokes] = useState(null);
   const [miscJokes, setMiscJokes] = useState(null);
+  const [jokes, setJokes] = useState(null)
 
   const progCall = () => {
     setIsLoaded(false);
@@ -14,7 +15,7 @@ const JokesBody = () => {
       .then((result) => {
         return result.json();
       })
-      .then((data) => setProgrammingJokes(data));
+      .then((data) => setJokes(data));
     setIsLoaded(true);
     console.log(programmingJokes);
   };
@@ -25,7 +26,7 @@ const JokesBody = () => {
       .then((result) => {
         return result.json();
       })
-      .then((data) => setDarkJokes(data));
+      .then((data) => setJokes(data));
     setIsLoaded(true);
     console.log(darkJokes);
   };
@@ -36,7 +37,7 @@ const JokesBody = () => {
       .then((result) => {
         return result.json();
       })
-      .then((data) => setPunJokes(data));
+      .then((data) => setJokes(data));
     setIsLoaded(true);
     console.log(punJokes);
   };
@@ -47,7 +48,7 @@ const JokesBody = () => {
       .then((result) => {
         return result.json();
       })
-      .then((data) => setMiscJokes(data));
+      .then((data) => setJokes(data));
     setIsLoaded(true);
     console.log(miscJokes);
   };
@@ -81,7 +82,8 @@ const JokesBody = () => {
         </button>
       </div>
       <div className="flex justify-center">
-        <JokeCardFlip programmingJokes={programmingJokes} />
+        <JokeCardFlip
+        jokes={jokes} />
       </div>
     </div>
   );
