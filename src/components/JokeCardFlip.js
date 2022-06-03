@@ -1,12 +1,12 @@
 import { React, useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
-const JokeCardFlip = ({ programmingJokes }) => {
+const JokeCardFlip = ({ jokes }) => {
   const ref = useRef();
 
   return (
     <Flippy
-      className="hover:scale-105 duration-500 shadow-2xl"
+      className="hover:scale-105 duration:500 shadow-2xl "
       flipOnHover={false} // default false
       flipOnClick={true} // default false
       flipDirection="horizontal" // horizontal or vertical
@@ -19,7 +19,10 @@ const JokeCardFlip = ({ programmingJokes }) => {
         className="flex rounded-xl flex-col items-center justify-center border-2 border-black"
         style={{ backgroundColor: "#FFCA3A" }}
       >
-        {/* {programmingJokes.setup} <br /> */}
+        <div className='bg-white shadow-sm shadow-black rounded-full border-2 h-[150px] w-[250px] flex items-center text-center' >
+        { jokes ? 
+        jokes.setup  : "Select a category to generate a joke" }
+        </div>
         <div
           className=""
           onClick={() => {
@@ -27,11 +30,14 @@ const JokeCardFlip = ({ programmingJokes }) => {
           }}
         ></div>
       </FrontSide>
+      
       <BackSide
         className="flex items-center justify-center rounded-xl border-2 border-black"
         style={{ backgroundColor: "#FFDE85" }}
       >
-        {/* {programmingJokes.delivery} */}
+        <div className='bg-white shadow-sm shadow-black rounded-full border-2 h-[150px] w-[250px] flex items-center text-center justify-center'>
+        {jokes && jokes.delivery}    
+        </div>
       </BackSide>
     </Flippy>
   );
