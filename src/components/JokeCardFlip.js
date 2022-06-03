@@ -1,7 +1,7 @@
 import { React, useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
-const JokeCardFlip = () => {
+const JokeCardFlip = ({ programmingJokes }) => {
   const ref = useRef();
 
   return (
@@ -19,7 +19,7 @@ const JokeCardFlip = () => {
         className="flex rounded-xl flex-col items-center justify-center border-2 border-black"
         style={{ backgroundColor: "#FFCA3A" }}
       >
-        What do you call a moon that's gone crazy? <br />
+        {/* {programmingJokes.setup} <br /> */}
         <div
           className=""
           onClick={() => {
@@ -31,7 +31,7 @@ const JokeCardFlip = () => {
         className="flex items-center justify-center rounded-xl border-2 border-black"
         style={{ backgroundColor: "#FFDE85" }}
       >
-        A lunatic 🌝
+        {/* {programmingJokes.delivery} */}
       </BackSide>
     </Flippy>
   );
