@@ -3,11 +3,11 @@ import JokeCardFlip from "./JokeCardFlip";
 
 const JokesBody = () => {
   const [isLoaded, setIsLoaded] = useState(null);
-  const [programmingJokes, setProgrammingJokes] = useState(null);
-  const [darkJokes, setDarkJokes] = useState(null);
-  const [punJokes, setPunJokes] = useState(null);
-  const [miscJokes, setMiscJokes] = useState(null);
-  const [jokes, setJokes] = useState(null)
+  const [jokes, setJokes] = useState(null);
+  // const [programmingJokes, setProgrammingJokes] = useState(null);
+  // const [darkJokes, setDarkJokes] = useState(null);
+  // const [punJokes, setPunJokes] = useState(null);
+  // const [miscJokes, setMiscJokes] = useState(null);
 
   const progCall = () => {
     setIsLoaded(false);
@@ -17,7 +17,7 @@ const JokesBody = () => {
       })
       .then((data) => setJokes(data));
     setIsLoaded(true);
-    console.log(programmingJokes);
+    console.log(jokes);
   };
 
   const darkCall = () => {
@@ -28,7 +28,7 @@ const JokesBody = () => {
       })
       .then((data) => setJokes(data));
     setIsLoaded(true);
-    console.log(darkJokes);
+    console.log(jokes);
   };
 
   const punCall = () => {
@@ -39,7 +39,7 @@ const JokesBody = () => {
       })
       .then((data) => setJokes(data));
     setIsLoaded(true);
-    console.log(punJokes);
+    console.log(jokes);
   };
 
   const miscCall = () => {
@@ -50,7 +50,7 @@ const JokesBody = () => {
       })
       .then((data) => setJokes(data));
     setIsLoaded(true);
-    console.log(miscJokes);
+    console.log(jokes);
   };
 
   return (
@@ -82,8 +82,7 @@ const JokesBody = () => {
         </button>
       </div>
       <div className="flex justify-center">
-        <JokeCardFlip
-        jokes={jokes} />
+        <JokeCardFlip jokes={jokes} />
       </div>
     </div>
   );
