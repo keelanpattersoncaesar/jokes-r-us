@@ -11,9 +11,7 @@ const JokesBody = () => {
 
   const progCall = () => {
     setIsLoaded(false);
-    fetch(
-      "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
-    )
+    fetch("https://v2.jokeapi.dev/joke/Programming?type=twopart")
       .then((result) => {
         return result.json();
       })
@@ -25,7 +23,7 @@ const JokesBody = () => {
   const darkCall = () => {
     setIsLoaded(false);
     fetch(
-      "https://v2.jokeapi.dev/joke/Dark?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+      "https://v2.jokeapi.dev/joke/Dark?type=twopart"
     )
       .then((result) => {
         return result.json();
@@ -38,7 +36,7 @@ const JokesBody = () => {
   const punCall = () => {
     setIsLoaded(false);
     fetch(
-      "https://v2.jokeapi.dev/joke/Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+      "https://v2.jokeapi.dev/joke/Pun?type=twopart"
     )
       .then((result) => {
         return result.json();
@@ -51,7 +49,7 @@ const JokesBody = () => {
   const miscCall = () => {
     setIsLoaded(false);
     fetch(
-      "https://v2.jokeapi.dev/joke/Misc?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+      "https://v2.jokeapi.dev/joke/Misc?type=twopart"
     )
       .then((result) => {
         return result.json();

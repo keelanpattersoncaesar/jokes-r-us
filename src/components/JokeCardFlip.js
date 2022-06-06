@@ -16,7 +16,7 @@ const JokeCardFlip = ({ jokes }) => {
       style={{ width: "300px", height: "350px" }} /// these are optional style, it is not necessary
     >
       <FrontSide
-        className="flex rounded-xl flex-col items-center justify-center border-2 border-black"
+        className="flex rounded-xl flex-col items-center text-center align-middle place-self-center justify-center border-2 border-black"
         style={{ backgroundColor: "#FFCA3A" }}
       >
         <div className="bg-white shadow-sm shadow-black rounded-full border-2 h-[150px] w-[250px] flex items-center text-center">
