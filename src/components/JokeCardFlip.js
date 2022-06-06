@@ -6,9 +6,9 @@ const JokeCardFlip = ({ jokes }) => {
 
   return (
     <Flippy
-      className="bg-[#1982C4] hover:scale-105 duration-700 cursor-pointer" // I took this shadow out because it wasn't blending well will the background
-      flipOnHover={false} // default false
-      flipOnClick={true} // default false
+      className="bg-[#1982C4] hover:scale-105 duration-1000 cursor-pointer" // I took this shadow out because it wasn't blending well will the background
+      flipOnHover={true} // default false
+      flipOnClick={false} // default false
       flipDirection="horizontal" // horizontal or vertical
       ref={ref} // to use toggle method like ref.current.toggle()
       // if you pass isFlipped prop component will be controlled component.

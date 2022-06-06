@@ -11,7 +11,9 @@ const JokesBody = () => {
 
   const progCall = () => {
     setIsLoaded(false);
-    fetch("https://v2.jokeapi.dev/joke/Programming?type=twopart")
+    fetch(
+      "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+    )
       .then((result) => {
         return result.json();
       })
@@ -22,7 +24,9 @@ const JokesBody = () => {
 
   const darkCall = () => {
     setIsLoaded(false);
-    fetch("https://v2.jokeapi.dev/joke/Dark?type=twopart")
+    fetch(
+      "https://v2.jokeapi.dev/joke/Dark?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+    )
       .then((result) => {
         return result.json();
       })
@@ -33,7 +37,9 @@ const JokesBody = () => {
 
   const punCall = () => {
     setIsLoaded(false);
-    fetch("https://v2.jokeapi.dev/joke/Pun?type=twopart")
+    fetch(
+      "https://v2.jokeapi.dev/joke/Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+    )
       .then((result) => {
         return result.json();
       })
@@ -44,7 +50,9 @@ const JokesBody = () => {
 
   const miscCall = () => {
     setIsLoaded(false);
-    fetch("https://v2.jokeapi.dev/joke/Misc?type=twopart")
+    fetch(
+      "https://v2.jokeapi.dev/joke/Misc?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart"
+    )
       .then((result) => {
         return result.json();
       })
@@ -55,27 +63,30 @@ const JokesBody = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row text-center list-none m-10 p-2 space-x-10 justify-center">
+      <div className="animate-bounce duration-1000 text-red-500 mx-auto pt-4 text-2xl">
+        Some jokes may be considered offensive. Proceed with at your own risk.
+      </div>
+      <div className="flex flex-row text-center list-none mt-3 mb-6 p-2 space-x-10 justify-center">
         <button
-          className="border-2 shadow-md shadow hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
+          className="border-2 shadow-md hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
           onClick={() => progCall()}
         >
           Programming Jokes
         </button>
         <button
-          className="border-2 shadow-md shadow hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
+          className="border-2 shadow-md hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
           onClick={() => darkCall()}
         >
           Dark Jokes
         </button>
         <button
-          className="border-2 shadow-md shadow hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
+          className="border-2 shadow-md hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
           onClick={() => punCall()}
         >
           Pun Jokes
         </button>
         <button
-          className="border-2 shadow-md shadow hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
+          className="border-2 shadow-md hover:shadow-xl hover:scale-105 duration-500 bg-[#FFCA3A] shadow-gray-600 border-black p-2 rounded-xl w-[164.09px]"
           onClick={() => miscCall()}
         >
           Misc Jokes
