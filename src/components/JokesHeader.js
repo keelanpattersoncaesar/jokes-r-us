@@ -49,8 +49,6 @@ const JokesHeader = () => {
       </div>
     </nav>
 
-    // <JokesAbout />
-    // <JokesContact />
   );
 };
 
