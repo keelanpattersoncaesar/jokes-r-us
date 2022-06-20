@@ -61,8 +61,8 @@ const JokesBody = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="animate-bounce duration-1000 text-red-500 mx-auto pt-4 text-2xl">
-        Some jokes may be considered offensive. Proceed with at your own risk.
+      <div className="animate-bounce duration-1000 text-[#FFCA3A] mx-auto pt-4 text-2xl">
+        Some jokes may be considered offensive. Proceed at your own risk.
       </div>
       <div className="flex flex-row text-center list-none mt-3 mb-6 p-2 space-x-10 justify-center">
         <button
